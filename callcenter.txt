@@ -1,0 +1,66 @@
+create database callcenter;
+
+use callcenter;
+
+create table reg
+( 
+CustomerId varchar(30),
+fname varchar(50),
+lname varchar(50),
+emailid  varchar(50),
+password varchar(50),
+contact varchar(50),
+address varchar(50),
+primary key(CustomerId));
+
+
+
+create table employee
+( 
+employeeid varchar(30),
+companyname varchar(50),
+fname varchar(50),
+lname varchar(50),
+address varchar(20),
+cnum varchar(50),
+experience varchar(50),
+designation varchar(50),
+primary key(employeeid));
+
+
+create table team
+( 
+teamid varchar(30),
+dept varchar(50),
+teamLeadername varchar(50),
+totalEmpInTeam varchar(50),
+description varchar(20),
+PDate varchar(50),
+primary key(teamid));
+
+
+create table performenc
+( 
+performenceid varchar(30),
+empid varchar(50),
+name varchar(50),
+designation varchar(50),
+dept varchar(20),
+date varchar(20),
+CustomerRating varchar(20),
+primary key(performenceid));
+
+create table feedback
+( 
+slno varchar(30),
+customername varchar(50),
+cnum varchar(50),
+rating varchar(20),
+Fdate varchar(20),
+primary key(slno));
+
+
+
+Create table admin(username varchar(30), password varchar(30));
+
+insert into admin values('admin','admin');
